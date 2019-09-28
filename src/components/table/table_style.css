@@ -1,7 +1,6 @@
 .game_field {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 15%;
+    justify-content: center;
     margin: 0 auto;
 }

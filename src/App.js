@@ -6,15 +6,8 @@ const w = 7;
 const h = 6;
 
 function App() {
-    let table = [];
-    for (let i = 0; i < w; i++) {
-        let col = [];
-        for (let j = 0; j < h; j++) {
-            col.push(0);
-        }
-        table.push(col);
-    }
-    const [field, setField] = useState(table);
+
+    const [field, setField] = useState(createEmptyGameField());
     const [currentPlayer, setCurrentPlayer] = useState(1);
 
     // const Winner = 0;
@@ -35,13 +28,25 @@ function App() {
 
 
         if(checkRow() || checkCol() || checkDiagonalDown() || checkDiagonalUp()) {
-            console.log("Winner", currentPlayer);
+            alert("Winner", currentPlayer);
+            setField(createEmptyGameField());
         }
 
         let whoseMove = currentPlayer === 1 ? 2 : 1;
         setCurrentPlayer(whoseMove);
     }
 
+    function createEmptyGameField() {
+        let table = [];
+        for (let i = 0; i < w; i++) {
+            let col = [];
+            for (let j = 0; j < h; j++) {
+                col.push(0);
+            }
+            table.push(col);
+        }
+        return table;
+    }
     function checkRow() {
         for (let i = 0; i < h; i++) { // row
             for (let j = 0; j < w - 3; j++) { //col

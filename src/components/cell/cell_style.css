@@ -1,25 +1,21 @@
 .cell {
-    /*background: rgb(198, 198, 198);*/
-    /*display: inline-block;*/
-    /*width: 100%;*/
-    /*border-radius: 10px;*/
-    /*margin: 5px;*/
-    /*!*color: rgb(198, 198, 198);*!*/
-    background: antiquewhite;
+    background: #eceff1;
     display: inline-block;
     width: 100%;
-    margin: 5px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    padding: 4px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border: 1px solid #cfd8dc;
+    cursor: pointer;
 }
 
 .cell_first_player {
-    background: rgb(198, 100, 111);
-    color: rgb(198, 100, 111);
+    background: #d32f2f;
+    color: #fff;
 }
 
 .cell_second_player {
-    background: rgb(110, 135, 198);
-    color: rgb(110, 135, 198);
+    background: #0277bd;
+    color: #fff;
 }
