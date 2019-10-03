@@ -9,7 +9,7 @@ function Welcome() {
             pathname: '/game',
             state: {
                 playerFirstPlayer: 'Cate',
-                playerSecondPlayer: 'Max'
+                playerSecondPlayer: 'Alex'
             }
         }}>Start</Link>
     </h1>

@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Table from '../table/Table';
 import {Redirect} from 'react-router-dom';
+import axios from "axios";
 
 const w = 7;
 const h = 6;
@@ -12,7 +13,26 @@ function App(props) {
     const [currentPlayer, setCurrentPlayer] = useState(1);
     const [Winner, setWinner] = useState(false);
 
+    useEffect(() =>{
+    const intervalId = setInterval(
+        () => {
+            axios.get('http://localhost:4000/info').then((response) => {
+                setField(response.data.field);
+                setCurrentPlayer(response.data.currentPlayer);
+            });
+        },
+        2000
+    );
+    return () => {
+        clearInterval(intervalId);
+    }
+}, []);
+
     function move(column) {
+        axios.post('https://localhost:4000/move', {
+            column: column
+        });
+
         if (field[column][0] !== 0) return;
 
         let r = h - 1;
