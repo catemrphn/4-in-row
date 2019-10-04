@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './game_over_style.css';
 
-function GameOver() {
-    return <h1>
-        Game over!
-        <br/>
-        <Link to={{
-            pathname: '/game',
-            state: {
-                playerFirstPlayer: 'Cate',
-                playerSecondPlayer: 'Max'
-            }
-        }}>Start again</Link>
-    </h1>
+
+function GameOver(props) {
+    console.log(props);
+    return <div className='game-over-page'>
+        <h1>
+            Game over!
+        </h1>
+            <div className='button-wrapper'>
+                <Link to={{
+                    pathname: '/game',
+                }}>Start again</Link>
+            </div>
+
+        </div>
 }
 
 export default GameOver;
