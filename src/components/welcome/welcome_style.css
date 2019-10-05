@@ -22,7 +22,6 @@ input:focus {
     outline: none;
 }
 .button-wrapper {
-    cursor: pointer;
     background: #ffa615;
     padding: 5px 10px;
     border-radius: 10px;
@@ -33,7 +32,8 @@ input:focus {
 }
 
  a {
-    text-decoration: none;
+     cursor: pointer;
+     text-decoration: none;
     text-align: center;
     color: #fff;
     font-weight: 700;

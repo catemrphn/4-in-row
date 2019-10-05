@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './game_over_style.css';
 
 
-function GameOver(props) {
-    console.log(props);
+function GameOver() {
     return <div className='game-over-page'>
         <h1>
             Game over!
