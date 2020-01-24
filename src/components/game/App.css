@@ -26,19 +26,20 @@
     align-items: center;
     justify-content: center;
     margin: 3% auto 2%;
-
+    color: #F1E9DA;
 }
 
 .player {
     margin: 0 1%;
     font-weight: 700;
     font-size: 20px;
+    color: #F1E9DA;
 }
 
 .first-player {
-    color:#d32f2f;
+    color:#D90368;
 }
 
 .second-player {
-    color: #0277bd;
+    color: #541388;
 }

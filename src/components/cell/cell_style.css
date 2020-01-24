@@ -1,21 +1,23 @@
 .cell {
     background: #eceff1;
     display: inline-block;
-    width: 100%;
+    /*width: 100%;*/
     font-size: 22px;
     font-weight: 700;
     padding: 6px 10px;
     box-sizing: border-box;
     border: 1px solid #cfd8dc;
     cursor: pointer;
+    width: 45px;
+    height: 45px;
 }
 
 .cell_first_player {
-    background: #d32f2f;
+    background: #D90368;
     color: #fff;
 }
 
 .cell_second_player {
-    background: #0277bd;
+    background: #541388;
     color: #fff;
 }

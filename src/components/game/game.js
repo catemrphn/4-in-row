@@ -13,13 +13,13 @@ function App(props) {
     const [Winner, setWinner] = useState(false);
 
     useEffect(() => {
-        axios.post('http://localhost:4000/start').then((response) => {
+        axios.post('https://brave-poitras-4e4a45.netlify.com/start').then((response) => {
             handleGame(response.data)
         });
 
         const intervalId = setInterval(
             () => {
-                axios.get('http://localhost:4000/info').then((response) => {
+                axios.get('https://brave-poitras-4e4a45.netlify.com/info').then((response) => {
                     handleGame(response.data)
                 });
             },
@@ -31,7 +31,7 @@ function App(props) {
     }, []);
 
     function move(column) {
-        axios.post('http://localhost:4000/move', {
+        axios.post('https://brave-poitras-4e4a45.netlify.com/move', {
             column: column
         }).then((response) => {
             handleGame(response.data)
@@ -65,7 +65,7 @@ function App(props) {
     }
     return (
         <div className='App'>
-            <div class='players'>
+            <div className='players'>
                 <p className='player first-player'> {props.location.state.firstPlayer}</p>
                  vs
                 <p className='player second-player'> {props.location.state.secondPlayer}</p>

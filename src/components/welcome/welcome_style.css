@@ -3,10 +3,14 @@
     display: flex;
     flex-direction: column;
     width: 20%;
+    background: #5f525d;
+    padding: 30px 60px;
+    border-radius: 10px;
 }
 h1 {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     text-align: center;
+    color: #F1E9DA;
 }
 input {
     margin-bottom: 20px;
@@ -22,7 +26,7 @@ input:focus {
     outline: none;
 }
 .button-wrapper {
-    background: #ffa615;
+    background: #2E294E;
     padding: 5px 10px;
     border-radius: 10px;
     width: 65%;
@@ -35,7 +39,7 @@ input:focus {
      cursor: pointer;
      text-decoration: none;
     text-align: center;
-    color: #fff;
+     color: #F1E9DA;
     font-weight: 700;
     font-size: 26px;
 }
